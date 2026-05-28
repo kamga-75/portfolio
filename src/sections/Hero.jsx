@@ -1,65 +1,32 @@
-import { motion } from 'framer-motion'
-
-function Hero() {
+import{ motion } from  'framer-motion'
+import { Link } from 'react-router-dom'
+function Hero()  {
   return (
-    <section style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      textAlign: 'center',
-      padding: '2rem',
-      paddingTop: '80px',
-      backgroundColor: '#ffffff',
-    }}>
+    <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '2rem', paddingTop: '80px', backgroundColor: '#f8f9ff' }}>
 
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        style={{ fontSize: '3rem', fontWeight: 700, color: '#1a1a2e' }}
-      >
-        Kamga Zainab
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#4f46e5', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem', color: '#ffffff', marginBottom: '1.5rem', fontWeight: 700 }}>
+        KZ
+      </motion.div>
+
+      <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }} style={{ fontSize: '3rem', fontWeight: 800, color: '#1a1a2e', marginBottom: '1.5rem' }}>
+        Bonjour, je suis Kamga Zainab
       </motion.h1>
 
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        style={{ fontSize: '1.3rem', color: '#4a4a6a', marginTop: '1rem' }}
-      >
-        Étudiante en Data Science
+      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }} style={{ fontSize: '1.1rem', color: '#6b6b8a', maxWidth: '550px', lineHeight: 1.8, marginBottom: '2.5rem' }}>
+        Etudiante passionnee par la donnee, le machine learning et la creation de solutions intelligentes.
       </motion.p>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        style={{ maxWidth: '600px', color: '#6b6b8a', marginTop: '1rem' }}
-      >
-        Passionnée par la donnée, le machine learning et la visualisation.
-      </motion.p>
+      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <Link to="/projects" style={{ padding: '0.9rem 2rem', backgroundColor: '#4f46e5', color: '#ffffff', borderRadius: '8px', fontWeight: 600, fontSize: '1rem', textDecoration: 'none' }}>Voir mes projets</Link>
+        <Link to="/contact" style={{ padding: '0.9rem 2rem', backgroundColor: 'transparent', color: '#4f46e5', borderRadius: '8px', fontWeight: 600, fontSize: '1rem', textDecoration: 'none', border: '2px solid #4f46e5' }}>Me contacter</Link>
+      </div>
 
-      <motion.a
-        href="#projects"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.9 }}
-        style={{
-          marginTop: '2rem',
-          padding: '0.8rem 2rem',
-          backgroundColor: '#1a1a2e',
-          color: '#ffffff',
-          borderRadius: '8px',
-          fontWeight: 600,
-          cursor: 'pointer',
-        }}
-      >
-        Voir mes projets
-      </motion.a>
+      <div style={{ display: 'flex', gap: '1.5rem', marginTop: '3rem' }}>
+        <a href="https://github.com/kamga-75" target="_blank" rel="noreferrer" style={{ color: '#6b6b8a', fontWeight: 500, textDecoration: 'none' }}>GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{ color: '#6b6b8a', fontWeight: 500, textDecoration: 'none' }}>LinkedIn</a>
+      </div>
 
-    </section>
+    </main>
   )
 }
 
